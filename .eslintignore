@@ -1,0 +1,7 @@
+node_modules/
+.gitignore
+package.json
+package-lock.json
+.eslintrc.cjs
+*.config.js
+vite.config.js
