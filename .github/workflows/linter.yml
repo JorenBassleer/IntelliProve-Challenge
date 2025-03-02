@@ -8,11 +8,19 @@ on:
       - ready_for_review
       - reopened
       - synchronize
-  jobs:
-    Linter:
-      runs-on: ubuntu-latest
-      steps:
-        -uses: actions/checkout@v3
-        -run: npm ci
-        -run: npm run lint
-        -run: npm run build
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Run build
+        run: npm run build
