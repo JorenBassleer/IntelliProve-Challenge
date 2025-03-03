@@ -1,12 +1,13 @@
 <template>
-  <span
+  <BaseIcon
     class="pi text-xl text-primary-hover cursor-pointer"
-    :class="isDarkMode ? 'pi-moon': 'pi-sun'"
+    :icon-name="isDarkMode ? 'pi-moon': 'pi-sun'"
     @click="onThemeSwitch"
   />
 </template>
 <script setup>
 import { ref } from 'vue';
+import BaseIcon from './BaseIcon.vue';
 
 // Get from device
 const isDarkMode = ref(false);

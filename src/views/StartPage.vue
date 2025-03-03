@@ -49,7 +49,10 @@
           </BaseCard>
         </section>
       </div>
-      <BaseButton class="mx-auto">
+      <BaseButton
+        class="mx-auto"
+        @click="$router.push({name: 'camera'})"
+      >
         Start my health check
       </BaseButton>
       <UserSelect class="absolute left-5 top-5" />

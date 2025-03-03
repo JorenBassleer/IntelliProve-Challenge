@@ -21,5 +21,9 @@ defineProps({
     type: String,
     default: 'primary',
   },
+  plain: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
