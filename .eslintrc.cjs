@@ -22,7 +22,11 @@ module.exports = {
   settings: {
     'import/resolver': {
       alias: {
-        map: [['@', './src/']],
+        map: [
+          ['@', './src/'],
+          ['@components', './src/components'],
+          ['@composables', './src/composables']
+        ],
         extensions: ['.js', '.vue'],
       },
     },
