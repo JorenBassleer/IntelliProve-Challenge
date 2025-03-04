@@ -1,9 +1,10 @@
 <template>
-  <section class="border-l-4 border-l-primary">
-    <div>
-      Some score here
+  <section class="border-l-4 border-l-primary flex items-center gap-2 pl-2">
+    <slot />
+    <div class="flex flex-col gap-1 justify-between">
+      <span class="uppercase">TITLE</span>
+      <span class="font-bold">{{ metric * 100 }}%</span>
     </div>
-    <span>{{ metric }}</span>
   </section>
 </template>
 <script setup>

@@ -8,7 +8,7 @@
         Return
       </BaseButton>
     </section>
-    <PanelComponent>
+    <BaseCard size="large">
       <div class="w-2/5">
         Graph here
       </div>
@@ -21,18 +21,21 @@
         </p>
         <ScorePerUser />
       </div>
-    </PanelComponent>
+    </BaseCard>
     <div class="border-b-4 border-b-primary pb-4 flex items-center gap-1 text-primary font-semibold text-lg">
       <BaseIcon icon-name="pi-arrow-up-left" />
       Well-being evolution
     </div>
-    <PanelComponent>
+    <BaseCard
+      size="large"
+      class="justify-start"
+    >
       <WidgetComponent
         widget="heart_rate"
         title="Heart rate"
         class="w-1/2"
       />
-    </PanelComponent>
+    </BaseCard>
   </div>
 </template>
 <script setup>
@@ -41,15 +44,15 @@ import { onMounted } from 'vue';
 import BaseButton from '@components/BaseButton.vue';
 import BaseIcon from '@components/BaseIcon.vue';
 import WidgetComponent from '@components/WidgetComponent.vue';
-import PanelComponent from './ResultsPageComponents/PanelComponent.vue';
+import BaseCard from '@components/BaseCard.vue';
 import ScorePerUser from './ResultsPageComponents/ScorePerUser.vue';
-// import { useBaseStore } from '../store/base';
+import { useBaseStore } from '../store/base';
 
-// const store = useBaseStore();
+const store = useBaseStore();
 
 // Delete at end
 onMounted(async () => {
-  // await store.getUserProfiles();
+  await store.getUserProfiles();
 });
 </script>
 <style scoped>
