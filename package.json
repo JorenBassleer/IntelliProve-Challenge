@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@kyvg/vue3-notification": "^3.4.1",
     "axios": "^1.8.1",
+    "date-fns": "^4.1.0",
+    "pinia": "^3.0.1",
     "primeicons": "^7.0.0",
+    "v-dropdown-menu": "^2.0.4",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },

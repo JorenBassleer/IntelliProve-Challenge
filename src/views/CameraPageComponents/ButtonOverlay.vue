@@ -4,13 +4,17 @@
       Need help
     </BaseButton>
     <div class="flex flex-col gap-4 justify-end items-end">
-      <BaseButton plain>
+      <BaseButton
+        plain
+        @click="$router.push({ name: 'home'})"
+      >
         Cancel health check
       </BaseButton>
 
       <BaseButton
         v-show="showResults"
         plain
+        @click="$router.push({ name: 'results'})"
       >
         Results
       </BaseButton>

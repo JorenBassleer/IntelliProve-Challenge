@@ -9,33 +9,42 @@
       class="w-full h-full border object-cover"
     />
     <div class="p-6 w-screen h-screen absolute top-0">
-      <ButtonOverlay :show-results="healthCheckIsDone" />
+      <ButtonOverlay :show-results="currentProfiles.length > 0" />
       <EmptyCameraState v-if="!hasPermission" />
     </div>
   </section>
 </template>
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import useNotify from '@composables/notify';
+import { storeToRefs } from 'pinia';
 import ButtonOverlay from './CameraPageComponents/ButtonOverlay.vue';
 import EmptyCameraState from './CameraPageComponents/EmptyCameraState.vue';
+import { useBaseStore } from '../store/base';
+
+const { notify } = useNotify();
+const store = useBaseStore();
+
+const { currentProfiles } = storeToRefs(store);
 
 const hasPermission = ref(false);
-const healthCheckIsDone = ref(false);
 const videoRef = ref(null);
 const stream = ref(null);
-const errorMessage = ref('');
 
 const startCamera = async () => {
   try {
     stream.value = await navigator.mediaDevices.getUserMedia({ video: true });
     hasPermission.value = true;
     videoRef.value.srcObject = stream.value;
-    setTimeout(() => {
-      healthCheckIsDone.value = true;
-    }, 5000);
+
+    await store.getUserProfiles();
   } catch (error) {
-    // Handle notify error
-    errorMessage.value = 'Failed to access the camera. Please allow permissions.';
+    notify({
+      title: 'No permission',
+      text: 'Failed to access the camera. Please allow permissions.',
+      type: 'error',
+    });
+    hasPermission.value = false;
   }
 };
 

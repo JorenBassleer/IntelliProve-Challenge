@@ -1,5 +1,7 @@
 # ToDo
-- Dashboard page (axios & authentication)
+- Add General well-being graph
+- Hide help button when camera is active
 - Plain buttons
-- Allow to switch user dropdown (use Pinia for state management)
+- Cleanup
 - Finish ReadMe
+- Deploy to Vercel(?)
