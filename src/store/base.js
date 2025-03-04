@@ -22,7 +22,10 @@ export const useBaseStore = defineStore('base', () => {
         headers: {
           Authorization: `Token ${currentAuthenticatedUser.value.token}`,
         },
-      }).then((response) => response.data));
+      }).then((response) => ({
+        profile,
+        ...response.data,
+      })));
 
       currentProfiles.value = await Promise.all(requests);
     } catch (e) {
