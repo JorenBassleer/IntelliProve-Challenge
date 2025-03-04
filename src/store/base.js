@@ -34,6 +34,30 @@ export const useBaseStore = defineStore('base', () => {
     }
   };
 
+  const getUserWidget = async (payload) => {
+    try {
+      const result = await instance.post(
+        '/v2/widgets/graph',
+        {
+          ...payload,
+        },
+        {
+          headers: {
+            Authorization: `Token ${currentAuthenticatedUser.value.token}`,
+          },
+        },
+      );
+      return result.data;
+    } catch (e) {
+      notify({
+        title: 'Error',
+        text: e.message,
+        type: 'error',
+      });
+      return e;
+    }
+  };
+
   const authenticate = async (email) => {
     try {
       const response = await instance.post('/v2/users/authenticate', {
@@ -68,6 +92,7 @@ export const useBaseStore = defineStore('base', () => {
     currentAuthenticatedUser,
     currentProfiles,
     getUserProfiles,
+    getUserWidget,
     authenticate,
   };
 });

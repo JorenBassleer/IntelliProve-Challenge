@@ -27,18 +27,30 @@
       Well-being evolution
     </div>
     <PanelComponent>
-      <h3 class="font-bold uppercase">
-        Heart rate
-      </h3>
+      <WidgetComponent
+        widget="heart_rate"
+        title="Heart rate"
+        class="w-1/2"
+      />
     </PanelComponent>
   </div>
 </template>
 <script setup>
+import { onMounted } from 'vue';
+
 import BaseButton from '@components/BaseButton.vue';
 import BaseIcon from '@components/BaseIcon.vue';
+import WidgetComponent from '@components/WidgetComponent.vue';
 import PanelComponent from './ResultsPageComponents/PanelComponent.vue';
 import ScorePerUser from './ResultsPageComponents/ScorePerUser.vue';
+// import { useBaseStore } from '../store/base';
 
+// const store = useBaseStore();
+
+// Delete at end
+onMounted(async () => {
+  // await store.getUserProfiles();
+});
 </script>
 <style scoped>
 .bg-primary-support {
