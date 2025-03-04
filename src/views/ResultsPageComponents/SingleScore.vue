@@ -3,8 +3,14 @@
     <div>
       Some score here
     </div>
-    <span>45%</span>
+    <span>{{ metric }}</span>
   </section>
 </template>
 <script setup>
+defineProps({
+  metric: {
+    type: Number,
+    required: true,
+  },
+});
 </script>
