@@ -24,7 +24,7 @@
           Using your <span class="font-bold">webcam</span> and the power of <span class="font-bold">artificial intelligence</span>, you can <span class="font-bold">perform a measurement of your vital signs</span> and gain insight in your:
         </p>
         <section class="grid grid-cols-3 gap-4 font-semibold">
-          <BaseCard>
+          <BaseCard class="flex-col">
             <img
               :src="MentalHealthRiskSvg"
               class="w-16 h-16 m-auto"
@@ -32,7 +32,7 @@
             Mental Health
           </BaseCard>
 
-          <BaseCard>
+          <BaseCard class="flex-col">
             <img
               :src="PhysicalHealthSvg"
               class="w-16 h-16 m-auto"
@@ -40,7 +40,7 @@
             Physical Health
           </BaseCard>
 
-          <BaseCard>
+          <BaseCard class="flex-col">
             <img
               :src="EnergyAndSleepSvg"
               class="w-16 h-16 m-auto"
