@@ -2,6 +2,8 @@
 
 This project is a frontend challenge for **IntelliProve**, built using **Vue 3**, **Vite**, **Pinia**, **Vue router** and **Tailwind CSS**. It features dynamic data visualization, theme switching, and interactive components.
 
+### [View it live](https://intelli-prove-challenge.vercel.app/)
+
 ## 🚀 Features
 - **Vue 3 Composition API** for modular and efficient code  
 - **Tailwind CSS** for rapid UI styling  
