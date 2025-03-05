@@ -22,3 +22,15 @@
   --color-primary-hover: rgba(9, 33, 135, 1);
   --shadow-button: box-shadow: 0px 8px 16px 0px var(--buttonprimaryshadow);
 }
+
+.dark {
+  --color-background: #121212;
+  --color-text: #ffffff;
+  --color-primary: #ffffff;
+  --color-primary-hover: #ffffff;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}

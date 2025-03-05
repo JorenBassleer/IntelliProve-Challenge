@@ -6,7 +6,7 @@
     >
       Need help
     </BaseButton>
-    <div class="flex flex-col gap-4 justify-end items-end">
+    <div class="flex flex-col gap-4 justify-end items-end ml-auto">
       <BaseButton
         plain
         @click="$router.push({ name: 'home'})"
