@@ -10,8 +10,8 @@ export const useBaseStore = defineStore('base', () => {
   const externalUserIds = ref(['emma.watson@intelliprove.com', 'john.snow@intelliprove.com']);
 
   const currentAuthenticatedUser = ref({
-    email: '',
-    token: '',
+    email: 'emma.watson@intelliprove.com',
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiIiwiY3VzdG9tZXIiOiJURVNULUNPREUtQ0hBTExFTkdFIiwiZ3JvdXAiOiJhZG1pbiIsIm1heF9tZWFzdXJlbWVudF9jb3VudCI6MTAwMDAsInVzZXJfaWQiOiJiNGM5ZDMzM2U4Mjc0MTA2OWFlMjBhOTMyOWVkYTViMyIsImF1dGgwX3VzZXJfaWQiOm51bGx9LCJtZXRhIjp7fSwiZXhwIjoxNzQxMjIwMTkwfQ.WJqd0VsaBgDE_nMyiMDtgGGiYOHhtKNY2YF6SMHTLHc',
   });
   const profiles = ['physical', 'mental', 'energy-sleep'];
   const currentProfiles = ref([]);
