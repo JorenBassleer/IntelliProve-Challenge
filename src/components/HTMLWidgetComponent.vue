@@ -44,3 +44,8 @@ onMounted(async () => {
   });
 });
 </script>
+<style>
+.intelli-widget {
+  justify-content: start !important;
+}
+</style>

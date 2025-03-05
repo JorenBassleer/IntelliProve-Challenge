@@ -7,6 +7,9 @@
       cursor-pointer px-6 py-4
       rounded-[40px] uppercase
       flex gap-3 font-semibold items-center text-white"
+    :class="{
+      '': plain
+    }"
   >
     <slot />
     <img :src="ChevronForward">

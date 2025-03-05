@@ -9,6 +9,11 @@ import 'primeicons/primeicons.css';
 
 const pinia = createPinia();
 
+const theme = localStorage.getItem('theme') || 'light';
+if (theme === 'dark') {
+  document.documentElement.classList.add('dark');
+}
+
 createApp(App)
   .use(router)
   .use(pinia)

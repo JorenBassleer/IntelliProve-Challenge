@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-primary-support p-20 flex flex-col gap-8 w-screen h-screen">
-    <section class="flex justify-between w-full">
+  <div class="bg-primary-support p-20 flex flex-col gap-8 w-screen h-screen overflow-auto">
+    <section class="flex justify-between w-full items-center">
       <h1 class="text-4xl font-bold">
         Your health report
       </h1>
@@ -9,9 +9,7 @@
       </BaseButton>
     </section>
     <BaseCard size="large">
-      <div class="w-2/5">
-        Graph here
-      </div>
+      <WellBeingGraph class="w-1/3" />
       <div class="flex flex-col gap-4 w-3/5">
         <h2 class="text-5xl font-bold">
           High load of stress detected
@@ -30,7 +28,7 @@
       size="large"
       class="justify-start"
     >
-      <WidgetComponent
+      <HTMLWidgetComponent
         widget="heart_rate"
         title="Heart rate"
         class="w-1/2"
@@ -43,8 +41,10 @@ import { onMounted } from 'vue';
 
 import BaseButton from '@components/BaseButton.vue';
 import BaseIcon from '@components/BaseIcon.vue';
-import WidgetComponent from '@components/WidgetComponent.vue';
+import HTMLWidgetComponent from '@components/HTMLWidgetComponent.vue';
 import BaseCard from '@components/BaseCard.vue';
+
+import WellBeingGraph from './ResultsPageComponents/WellBeingGraph.vue';
 import ScorePerUser from './ResultsPageComponents/ScorePerUser.vue';
 import { useBaseStore } from '../store/base';
 

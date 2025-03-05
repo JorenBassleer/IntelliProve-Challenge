@@ -9,7 +9,10 @@
       class="w-full h-full border object-cover"
     />
     <div class="p-6 w-screen h-screen absolute top-0">
-      <ButtonOverlay :show-results="currentProfiles.length > 0" />
+      <ButtonOverlay
+        :show-results="currentProfiles.length > 0"
+        :show-help="!hasPermission"
+      />
       <EmptyCameraState v-if="!hasPermission" />
     </div>
   </section>

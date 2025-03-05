@@ -11,13 +11,15 @@
   },
   "dependencies": {
     "@kyvg/vue3-notification": "^3.4.1",
+    "apexcharts": "^4.5.0",
     "axios": "^1.8.1",
     "date-fns": "^4.1.0",
     "pinia": "^3.0.1",
     "primeicons": "^7.0.0",
     "v-dropdown-menu": "^2.0.4",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.0",
+    "vue3-apexcharts": "^1.8.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.9",
